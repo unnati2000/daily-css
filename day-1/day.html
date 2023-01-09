@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .box1 {
+        background: #b65cf3;
+        height: 400px;
+        width: 400px;
+        transition-duration: 500ms;
+        transition-property: background, width;
+      }
+
+      .box1:hover {
+        background: rgb(232, 114, 114);
+        width: 50%;
+        /* transform: scale(1.1,); */
+      }
+
+      .box2 {
+        margin: 20px;
+        background: #f1652d;
+        height: 100px;
+        width: 100px;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in;
+        transition-property: background, transform, width;
+        animation: rotateOnX 1s 2;
+        position: relative;
+      }
+
+      @keyframes rotateOnX {
+        from {
+          left: 0px;
+          transform: rotate(30deg);
+        }
+
+        to {
+          left: 420px;
+          transform: rotate(60deg);
+        }
+
+        0% {
+          transform: rotate(30deg);
+          left: 20px;
+        }
+
+        10% {
+          transform: rotate(60deg);
+          left: 80px;
+          scale: (1.5, 1.5);
+        }
+
+        20% {
+          transform: rotate(90deg);
+          left: 120px;
+        }
+
+        35% {
+          transform: rotate(120deg);
+          left: 180px;
+        }
+        50% {
+          transform: rotate(150deg);
+          left: 240px;
+        }
+
+        70% {
+          transform: rotate(180deg);
+          left: 300px;
+        }
+
+        90% {
+          transform: rotate(210deg);
+          left: 360px;
+        }
+
+        100% {
+          transform: rotate(250deg);
+          left: 420px;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <!-- <div class="box1"></div> -->
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
