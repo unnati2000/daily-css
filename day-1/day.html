@@ -36,7 +36,7 @@
         transition-duration: 500ms;
         transition-timing-function: ease-in;
         transition-property: background, transform, width;
-        animation: rotateOnX 1s 2;
+        animation: rotateOnX 1s 1;
         position: relative;
       }
 
@@ -52,6 +52,46 @@
         }
 
         0% {
+          transform: rotate(0deg);
+          left: 0px;
+        }
+
+        15% {
+          transform: rotate(60deg);
+          left: 40px;
+        }
+
+        30% {
+          transform: rotate(90deg);
+          left: 80px;
+        }
+
+        45% {
+          transform: rotate(180deg);
+          left: 120px;
+        }
+
+        60% {
+          transform: rotate(210deg);
+          left: 160px;
+        }
+
+        75% {
+          transform: rotate(270deg);
+          left: 200px;
+        }
+
+        95% {
+          transform: rotate(300deg);
+          left: 240px;
+        }
+
+        100% {
+          transform: rotate(360deg);
+          left: 280px;
+        }
+
+        /* 0% {
           transform: rotate(30deg);
           left: 20px;
         }
@@ -89,7 +129,7 @@
         100% {
           transform: rotate(250deg);
           left: 420px;
-        }
+        } */
       }
     </style>
 

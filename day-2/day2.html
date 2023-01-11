@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .parent-grid {
+        display: grid;
+        gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .container:hover .foreground-v {
+        height: 100%;
+      }
+
+      .container:hover .foreground-h {
+        width: 100%;
+      }
+
+      .div-1 {
+        background-color: rgb(182, 164, 249);
+        grid-column: 1/2;
+        grid-row: 1/6;
+      }
+
+      .div-1 .background-v {
+        background-color: blue;
+      }
+
+      .div-2 {
+        background-color: rgb(66, 24, 218);
+        grid-column: 2/5;
+        grid-row: 1/4;
+      }
+
+      .div-3 {
+        background-color: rgb(218, 24, 170);
+        grid-column: 2/3;
+        grid-row: 4/8;
+      }
+
+      .div-4 {
+        background: rgb(36, 30, 30);
+        grid-column: 3/5;
+        grid-row: 4/8;
+      }
+
+      .div-6 {
+        background: rgb(63, 136, 95);
+        grid-column: 1/2;
+        grid-row: 6/8;
+      }
+
+      .background-v {
+        /* background-image: url('https://picsum.photos/200'); */
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+
+      .foreground-v {
+        background: black;
+        position: absolute;
+        height: 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: height 1000ms ease-in-out;
+      }
+
+      .background-h {
+        background-image: url('https://picsum.photos/200');
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+
+      .foreground-h {
+        background: black;
+        position: absolute;
+        height: 100%;
+        width: 0;
+        top: 0;
+        left: 0;
+        transition: width 1000ms ease-in-out;
+      }
+    </style>
+
+    <div class="main">
+      <div class="parent-grid">
+        <div class="container div-1">
+          <div class="background-v"></div>
+          <div class="foreground-v"></div>
+        </div>
+        <div class="container div-2">
+          <div class="background-h"></div>
+          <div class="foreground-h"></div>
+        </div>
+        <div class="container div-3">
+          <div class="background-v"></div>
+          <div class="foreground-v"></div>
+        </div>
+        <div class="container div-4">
+          <div class="background-h"></div>
+          <div class="foreground-h"></div>
+        </div>
+
+        <div class="container div-6">
+          <div class="background-h"></div>
+          <div class="foreground-h"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
